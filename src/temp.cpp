@@ -15,7 +15,7 @@
  */
 #include <fcntl.h>
 #include <stdio.h>
-#include <linux/joystick.h>
+#include </usr/include/linux/joystick.h>
 
 
 int main(int argc, char *argv[])
