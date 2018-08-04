@@ -23,8 +23,8 @@ int main(int argc, char *argv[])
 {
    int fd = open ("/dev/input/js0", O_RDONLY);
 
-   struct js_event e;
-   read (fd, &e, sizeof(e));
+   //struct js_event e;
+   //read (fd, &e, sizeof(e));
    close(fd);
    return 0;
 }
