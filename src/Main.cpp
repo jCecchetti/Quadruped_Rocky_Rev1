@@ -18,8 +18,6 @@
 #include <unistd.h>
 #include </usr/include/linux/joystick.h>
 
-
-
 /**
  * Reads a joystick event from the joystick device.
  *
