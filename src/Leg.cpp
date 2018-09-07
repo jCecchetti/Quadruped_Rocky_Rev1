@@ -9,6 +9,7 @@
 #include <math.h>
 #include "Position.h"
 #include <iostream>
+#include "Constants.h"
 
 Leg::Leg() {
 }
@@ -48,9 +49,13 @@ bool Leg::calculateAngles(double x, double y, double z){
 	if(left) ankleAngle = ankleCenter + (pi - acos((TIBIA*TIBIA + TARSUS*TARSUS - L*L)/(2*TIBIA*TARSUS)));
 	else ankleAngle = pi - (ankleCenter + (pi - acos((TIBIA*TIBIA + TARSUS*TARSUS - L*L)/(2*TIBIA*TARSUS))));
 
-	std::cout << hipAngle*57.2958 << std::endl;
-	std::cout << kneeAngle*57.2958 << std::endl;
-	std::cout << ankleAngle*57.2958 << std::endl;
+	hipAngle *= 57.2958;
+	kneeAngle *= 57.2958;
+	ankleAngle *= 57.2958;
+
+	std::cout << hipAngle << std::endl;
+	std::cout << kneeAngle << std::endl;
+	std::cout << ankleAngle << std::endl;
 
 	return true;
 }

@@ -3,14 +3,19 @@
 #include <chrono>
 #include "Position.h"
 #include "Leg.h"
+#include "PositionCluster.h"
+#include <iostream>
 
 using namespace std;
 
 int main(int argc, char *argv[])
 {
-	Position position(0,0,-4,0,0,0);
+	Position position(0,0,-5,0,0,0);
 	Leg leg(false);
 	leg.setFootPos(position);
+
+	PositionCluster a = PositionCluster(Position(0,0,0,0,0,0), Position(0,0,0,0,0,0), Position(0,0,0,0,0,0), Position(0,0,0,0,0,0));
+	std::cout << a.position[0].x;
 
 	//time timer = time();
 	/*double fps = 60;// updates per second
