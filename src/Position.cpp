@@ -25,6 +25,15 @@ Position::Position(double x, double y, double z, double roll, double pitch, doub
 	this->yaw = yaw;
 }
 
+void Position::set(double x, double y, double z, double roll, double pitch, double yaw){
+	this->x = x;
+	this->y = y;
+	this->z = z;
+	this->roll = roll;
+	this->pitch = pitch;
+	this->yaw = yaw;
+}
+
 Position::~Position() {
 	// TODO Auto-generated destructor stub
 }

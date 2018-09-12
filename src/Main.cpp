@@ -5,16 +5,18 @@
 #include "Leg.h"
 #include "PositionCluster.h"
 #include <iostream>
+#include "Body.h"
 
 using namespace std;
 
 int main(int argc, char *argv[])
 {
-	Position position(0,0,-5,0,0,0);
+	Position position(0,0,0,0,32,10);
 	Leg leg(false);
-	leg.setFootPos(position);
+	//leg.setFootPos(position);
 
-	PositionCluster a = PositionCluster(Position(0,0,0,0,0,0), Position(0,0,0,0,0,0), Position(0,0,0,0,0,0), Position(0,0,0,0,0,0));
+	Body b;
+	PositionCluster a = b.getLocalCornerPos(position);
 	std::cout << a.position[0].x;
 
 	//time timer = time();

@@ -11,7 +11,8 @@
 class Position {
 public:
 	Position();
-	Position(double, double, double, double, double, double);
+	Position(double x, double y, double z, double roll, double pitch, double yaw);
+	void set(double x, double y, double z, double roll, double pitch, double yaw);
 	virtual ~Position();
 
 	double x, y, z, roll, pitch, yaw;

@@ -12,7 +12,7 @@
 #include "PositionCluster.h"
 
 class Position;
-
+class PositionCluster;
 
 class Body {
 public:
@@ -28,6 +28,8 @@ public:
 
 	double toRadians(double degrees);
 
+private:
+	PositionCluster localCornerPos;
 };
 
 #endif /* BODY_H_ */
