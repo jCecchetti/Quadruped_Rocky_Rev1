@@ -1,23 +1,40 @@
+
 #include <stdio.h>
-#include <time.h>
-#include <chrono>
-#include "Position.h"
 #include "Leg.h"
 #include "PositionCluster.h"
 #include <iostream>
-#include "Body.h"
+#include "RobotMotion.h"
 
-using namespace std;
+
 
 int main(int argc, char *argv[])
 {
-	Position position(0,0,0,0,32,10);
-	Leg leg(false);
-	//leg.setFootPos(position);
+	Leg frontLeftLeg;
+	Leg frontRightLeg;
+	Leg rearLeftLeg;
+	Leg rearRightLeg;
 
-	Body b;
-	PositionCluster a = b.getLocalCornerPos(position);
-	std::cout << a.position[0].x;
+	RobotMotion motion(frontLeftLeg, frontRightLeg, rearLeftLeg, rearRightLeg);
+	motion.update();
+
+	//std::cout << a.position[0].x;
+
+	/*double a[3][3] = {{1,2,3},{2,3,4},{3,4,5}};
+	double x[3] = {1,2,3};
+
+
+	        int m = 3;
+	        int n = 3;
+	        double y[3] = {0,0,0};
+	        for (int i = 0; i < m; i++){
+	        	for (int j = 0; j < n; j++){
+	        		y[i] += a[i][j] * x[j];
+	        		std::cout << y[i] << std::endl;
+	        	}
+	        }
+*/
+	        //std::cout << x[0];
+
 
 	//time timer = time();
 	/*double fps = 60;// updates per second

@@ -13,6 +13,7 @@ public:
 	Position();
 	Position(double x, double y, double z, double roll, double pitch, double yaw);
 	void set(double x, double y, double z, double roll, double pitch, double yaw);
+	void copy(Position a);
 	virtual ~Position();
 
 	double x, y, z, roll, pitch, yaw;

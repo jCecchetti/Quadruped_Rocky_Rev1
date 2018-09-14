@@ -14,6 +14,7 @@ class PositionCluster {
 public:
 	PositionCluster();
 	PositionCluster(Position frontRight, Position frontLeft, Position rearRight, Position rearLeft);
+	void copy(PositionCluster);
 	virtual ~PositionCluster();
 
 	//Position frontRight, frontLeft, rearRight, rearLeft;

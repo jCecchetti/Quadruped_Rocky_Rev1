@@ -19,6 +19,13 @@ PositionCluster::PositionCluster(Position frontRight, Position frontLeft, Positi
 	position[3] = rearRight;
 }
 
+void PositionCluster::copy(PositionCluster a){
+	position[0].copy(a.position[0]);
+	position[1].copy(a.position[1]);
+	position[2].copy(a.position[2]);
+	position[3].copy(a.position[3]);
+}
+
 PositionCluster::~PositionCluster() {
 	// TODO Auto-generated destructor stub
 }

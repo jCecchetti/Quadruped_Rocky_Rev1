@@ -21,7 +21,7 @@ private:
 	bool calculateAngles(double, double, double);
 	//AdafruitServo servo1, servo2, servo3;
 
-	const double pi = 3.1416;
+	double pi = 3.1416;
 
 	double hipAngle = pi/2.0;
 	double kneeAngle = pi/2.0;
